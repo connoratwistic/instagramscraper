@@ -75,12 +75,14 @@ class App extends Component {
 
     let theData = null;
     let totalNumComments = 0;
+    let totalLikes = 0;
 
     if(this.state.loaded) {
       theData = this.state.data.graphql.user.edge_owner_to_timeline_media.edges.map(data => {
         totalNumComments += data.node.edge_media_to_comment.count;
+        totalLikes += data.node.edge_liked_by.count;
         return(
-          <div className="col-4">
+          <div className="col-12 col-md-4">
             <div class="card">
               <img class="card-img-top" src={data.node.display_url} />
               <div class="card-body">
@@ -105,6 +107,7 @@ class App extends Component {
           <h1>{this.state.title}</h1>
           <h2>The Current Follower Count is: {this.state.liveCounter}</h2>
           <h3>The total number of comments are: <span style={{color: "green"}}>{totalNumComments}</span></h3>
+          <h3>The total number of likes are: <span style={{color: "green"}}>{totalLikes}</span></h3>
         </header>
         <Container className="mt-5"><Row>{theData}</Row></Container>
       </div>
