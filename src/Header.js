@@ -11,7 +11,7 @@ const Header = (props) => {
     return(
     <Row>
         <Col>
-            <h1>Please Enter an Instagram User</h1>
+            <h1>Please Enter Exact Instagram Username</h1>
             <FormControl type="text" onChange={props.userToCheck} />
             <Button className="btn-success" onClick={props.makeUrl}>Submit</Button>
         </Col>
