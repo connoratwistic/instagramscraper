@@ -1,15 +1,9 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
 import './App.css';
-import FormControl from 'react-bootstrap/FormControl';
 
 import axios from 'axios';
-import { render } from '@testing-library/react';
-
-import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
-import Button from 'react-bootstrap/Button';
 
 import Header from './Header';
 
