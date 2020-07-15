@@ -105,6 +105,7 @@ class App extends Component {
           <h2>The Current Follower Count is: {this.state.liveCounter}</h2>
           <h3>The total number of comments are: <span style={{color: "green"}}>{totalNumComments}</span></h3>
           <h3>The total number of likes are: <span style={{color: "green"}}>{totalLikes}</span></h3>
+          <h1>Scroll down for posts...</h1>
         </header>
         <Container className="mt-5"><Row>{theData}</Row></Container>
       </div>
