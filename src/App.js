@@ -78,7 +78,7 @@ class App extends Component {
         return(
           <div className="col-12 col-md-4">
             <div class="card">
-              <img class="card-img-top" src={data.node.display_url} />
+              <img class="card-img-top" src={data.node.display_url} alt='No pic' />
               <div class="card-body">
                 <h5 class="card-title text-danger">Comments: {data.node.edge_media_to_comment.count}</h5>
                 <h5 class="card-title text-danger">Likes: {data.node.edge_liked_by.count}</h5>
@@ -97,7 +97,10 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <Header userToCheck={this.userToCheck} makeUrl={this.makeUrl} />
+          <Container>
+            <Header userToCheck={this.userToCheck} makeUrl={this.makeUrl} />
+          </Container>
+          
           <h1>{this.state.title}</h1>
           <h2>The Current Follower Count is: {this.state.liveCounter}</h2>
           <h3>The total number of comments are: <span style={{color: "green"}}>{totalNumComments}</span></h3>
